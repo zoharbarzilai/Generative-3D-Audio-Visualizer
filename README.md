@@ -60,6 +60,52 @@ If you chose to upload files, a playlist will appear in the top-left corner.
 *   **Audio Processing**: Web Audio API
 *   **Styling**: Tailwind CSS
 
+## 🔧 Running Locally
+
+To run this project on your local machine, you need a simple web server to serve the files. Opening the `index.html` file directly in your browser (`file://...`) will not work due to browser security policies (CORS).
+
+Here are a few easy ways to start a local server on macOS or Windows:
+
+### Option 1: Using Node.js (Recommended)
+
+This is the simplest method if you have [Node.js](https://nodejs.org/) installed.
+
+1.  Open your terminal (Terminal on macOS, Command Prompt or PowerShell on Windows).
+2.  Navigate to the project's root directory (the one containing `index.html`).
+3.  Run the following command:
+    ```bash
+    npx serve
+    ```
+4.  The server will start and give you a local URL, usually `http://localhost:3000`. Open this URL in your web browser.
+
+### Option 2: Using Python
+
+If you have Python installed, you can use its built-in web server.
+
+1.  Open your terminal or command prompt.
+2.  Navigate to the project's root directory.
+3.  Run the command for your Python version:
+
+    *   **Python 3 (macOS and Windows):**
+        ```bash
+        python -m http.server
+        ```
+    *   **If the above doesn't work, you may have an older Python 2:**
+        ```bash
+        python -m SimpleHTTPServer
+        ```
+4.  The server will start, typically on `http://localhost:8000`. Open this URL in your web browser.
+
+### Option 3: Using VS Code Live Server Extension
+
+If you are using Visual Studio Code as your editor:
+
+1.  Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension from the VS Code Marketplace.
+2.  Open the project folder in VS Code.
+3.  Right-click on the `index.html` file in the explorer panel and select "Open with Live Server".
+4.  Your browser will automatically open with the project running.
+
+
 ## 📄 Documentation & Internals
 
 For those interested in a deeper understanding of how the visualizer works, detailed documentation is available in the `/docs` folder:

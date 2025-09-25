@@ -26,9 +26,8 @@ export const useAudioAnalyzer = (audioElementRef: React.RefObject<HTMLAudioEleme
         if (!audioContextRef.current) {
             const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
             if (AudioContext) {
-                // FIX: The parameter-less AudioContext constructor is the most compatible across browsers.
-                // The previous implementation with a try-catch block was causing an error on some platforms.
-                audioContextRef.current = new AudioContext();
+                // FIX: Pass an empty options object to satisfy the constructor's type signature.
+                audioContextRef.current = new AudioContext({});
             } else {
                 console.error("AudioContext is not supported in this browser.");
                 return;
