@@ -1,0 +1,7 @@
+{
+  "name": "Generative 3D Audio Visualizer",
+  "description": "An immersive 3D audio visualizer that reacts to music from files or your microphone. Features a generative sphere, dynamic starfield, and customizable visual effects, all rendered in real-time with Three.js and custom shaders.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
